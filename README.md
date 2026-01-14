@@ -47,7 +47,7 @@ Todos los espaciados están definidos en `rem` para mejor escalabilidad:
 - **Familias**: `--font-family-alata`, `--font-family-josefin`
 - **Tamaños**: Tokens específicos para mobile, tablet y desktop
 
-**Justificación**: Este sistema permite cambios globales desde un solo lugar, mejora la consistencia visual y facilita el mantenimiento del código.
+Este sistema permite cambios globales desde un solo lugar, mejora la consistencia visual y facilita el mantenimiento del código.
 
 ### Imágenes Responsive
 
@@ -60,7 +60,7 @@ Se implementó el uso del elemento `<picture>` con `srcset` para servir imágene
 </picture>
 ```
 
-**Justificación**: Esto mejora significativamente el rendimiento al cargar imágenes apropiadas para cada dispositivo, reduciendo el ancho de banda y mejorando los tiempos de carga y evitando tener que cargar las imagenes por hacks en CSS.
+Esto mejora significativamente el rendimiento al cargar imágenes apropiadas para cada dispositivo, reduciendo el ancho de banda y mejorando los tiempos de carga y evitando tener que cargar las imagenes por hacks en CSS.
 
 ### Organización del CSS
 
@@ -72,8 +72,9 @@ El CSS está organizado siguiendo el orden de aparición en el HTML:
 5. FeatureCard section
 6. Creations section
 7. Footer
+8. Media queries
 
-Se utilizan solo dos media queries para todo el código (tablet y desktop), dentro de los cuales se identifica claramente qué código pertenece a cada componente mediante comentarios y agrupación lógica.Esta organización evita que el CSS sea muy largo, facilita la navegación del código y hace más fácil encontrar y modificar estilos relacionados, manteniendo todos los estilos responsive agrupados por breakpoint.
+Se utilizan dos media queries para tablet y desktop, dentro de los cuales se identifica claramente qué código pertenece a cada componente mediante comentarios y agrupación lógica. Esta organización evita que el CSS sea muy largo duplicando media queries, facilita la navegación del código y hace más fácil encontrar y modificar estilos relacionados, manteniendo todos los estilos responsive agrupados por breakpoint.
 
 ### Uso de Unidades REM
 
@@ -117,16 +118,6 @@ El diseño comienza con estilos base para mobile y luego se adapta a pantallas m
 - **Mobile**: Base (hasta 48rem / 768px)
 - **Tablet**: `min-width: 48rem` (768px)
 - **Desktop**: `min-width: 64rem` (1024px)
-
-### Estrategias Implementadas
-
-1. **Navegación**: Menú hamburguesa en mobile que se transforma en navegación horizontal en desktop
-2. **Imágenes**: Uso de `<picture>` con `srcset` para servir imágenes optimizadas según el viewport
-3. **Grid/Flexbox**: 
-   - Creations grid: columna única en mobile, grid 4x2 en desktop
-   - FeatureCard: columna en mobile, fila con overlay en desktop
-4. **Tipografía**: Tamaños de fuente adaptativos usando tokens específicos por breakpoint
-5. **Espaciados**: Padding y margins que se ajustan según el viewport usando los tokens definidos
 
 ### Contenedores Responsive
 
