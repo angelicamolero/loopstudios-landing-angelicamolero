@@ -147,7 +147,7 @@ Se implementaron contenedores con `max-width` diferentes para cada breakpoint:
 ## 🔗 Links
 
 - **Repositorio**: [https://github.com/angelicamolero/loopstudios-landing-angelicamolero](https://github.com/angelicamolero/loopstudios-landing-angelicamolero)
-- **Deploy**: 
+- **Deploy**: [https://loopstudios-landing-angelicamolero.netlify.app/](https://loopstudios-landing-angelicamolero.netlify.app/)
 
 ---
 
